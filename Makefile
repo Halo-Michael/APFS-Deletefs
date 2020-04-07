@@ -1,5 +1,5 @@
 TARGET = APFS Deletefs
-VERSION = 0.1.0
+VERSION = 0.1.1
 CC = xcrun -sdk iphoneos clang -arch arm64 -arch arm64e -miphoneos-version-min=10.3
 LDID = ldid
 

@@ -1,5 +1,6 @@
 #include <dlfcn.h>
 #include <stdio.h>
+#include <string.h>
 #include <unistd.h>
 typedef int (*apfs_delete_fs_func) (const char * dev_name);
 
@@ -21,6 +22,7 @@ int apfs_delete_fs(const char * dev_name){
 
 void usage(){
     printf("Usage:\tapfs_deletefs <dev name>\n");
+    printf("\t-h\t\t\tPrint this help.\n");
 }
 
 int main(int argc, char **argv)
@@ -37,9 +39,17 @@ int main(int argc, char **argv)
     if (argc != 2) {
         usage();
         return 1;
+    } else if (strcmp(argv[1], "-h") == 0) {
+        usage();
+        return 1;
     }
     
-    apfs_delete_fs(argv[1]);
+    int ret = apfs_delete_fs(argv[1]);
+    if (ret){
+        printf("Failed to delete fs %s\n.", argv[1]);
+    } else {
+        printf("Successfully deleted fs %s\n.", argv[1]);
+    }
     
-    return 0;
+    return ret;
 }

@@ -20,7 +20,7 @@ postinst: clean
 	strip postinst
 	$(LDID) -Sentitlements.xml postinst
 
-preinst: clean
+apfs_deletefs: clean
 	$(CC) apfs_deletefs.c -o apfs_deletefs
 	strip apfs_deletefs
 	$(LDID) -Sentitlements-disk.xml apfs_deletefs

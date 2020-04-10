@@ -1,5 +1,5 @@
 Package: com.michael.apfs-deletefs
-Version: 0.1.1
+Version: 0.1.2
 Section: System
 Name: APFS Deletefs
 Author: halo_michael <yc992147156@me.com>
@@ -8,4 +8,4 @@ Maintainer: halo_michael <yc992147156@me.com>
 Depends: coreutils, firmware (>= 10.3)
 Architecture: iphoneos-arm
 Description: A command line tool for deleting apfs partition on iOS/iPadOS.
- A command line tool for deleting apfs partition on iOS/iPadOS.
+Depiction: https://halo-michael.github.io/repo/info/apfs-deletefs

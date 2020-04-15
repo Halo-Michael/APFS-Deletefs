@@ -1,5 +1,5 @@
 TARGET = APFS Deletefs
-VERSION = 0.1.2
+VERSION = 0.1.4
 CC = xcrun -sdk iphoneos clang -arch arm64 -arch arm64e -miphoneos-version-min=10.3
 LDID = ldid
 
@@ -10,9 +10,8 @@ all: clean postinst apfs_deletefs
 	mkdir com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/DEBIAN
 	cp control com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/DEBIAN
 	mv postinst com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/DEBIAN
-	mkdir com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/usr
-	mkdir com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/usr/bin
-	mv apfs_deletefs com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/usr/bin
+	mkdir com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/sbin
+	mv apfs_deletefs com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm/sbin
 	dpkg -b com.michael.apfs-deletefs_$(VERSION)_iphoneos-arm
 
 postinst: clean

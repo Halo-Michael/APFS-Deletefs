@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     }
 
     int ret = APFSVolumeDelete(argv[1]);
-    if (APFSVolumeDelete(argv[1])) {
+    if (ret) {
         printf("Failed to delete fs %s.\n", argv[1]);
     } else {
         printf("Successfully deleted fs %s.\n", argv[1]);

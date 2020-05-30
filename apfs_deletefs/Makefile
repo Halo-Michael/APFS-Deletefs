@@ -6,7 +6,7 @@ include $(THEOS)/makefiles/common.mk
 
 TOOL_NAME = apfs_deletefs
 
-$(TOOL_NAME)_FILES = main.m
+$(TOOL_NAME)_FILES = $(TOOL_NAME).c
 $(TOOL_NAME)_PRIVATE_FRAMEWORKS = APFS
 $(TOOL_NAME)_CODESIGN_FLAGS = -S../entitlements-disk.xml
 

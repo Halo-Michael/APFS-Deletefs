@@ -21,10 +21,10 @@ int main(int argc, char **argv)
 
     if (argc != 2) {
         usage();
-        return 1;
+        return 3;
     } else if (strcmp(argv[1], "-h") == 0) {
         usage();
-        return 1;
+        return 2;
     }
 
     int ret = APFSVolumeDelete(argv[1]);

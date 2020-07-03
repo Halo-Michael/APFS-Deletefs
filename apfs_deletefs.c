@@ -5,7 +5,7 @@ int APFSVolumeDelete(const char *);
 
 void usage(){
     printf("Usage:\tapfs_deletefs <dev name>\n");
-    printf("\t-h\t\t\tPrint this help.\n");
+    printf("\t-h\tPrint this help.\n");
 }
 
 int main(int argc, char **argv)

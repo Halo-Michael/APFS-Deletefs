@@ -4,6 +4,10 @@
 <dict>
 	<key>com.apple.private.security.disk-device-access</key>
 	<true/>
+	<key>com.apple.security.iokit-user-client-class</key>
+	<array>
+		<string>AppleAPFSUserClient</string>
+	</array>
 	<key>platform-application</key>
 	<true/>
 </dict>

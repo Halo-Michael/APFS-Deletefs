@@ -4,7 +4,7 @@
 int APFSVolumeDelete(const char *);
 
 void usage(){
-    printf("Usage:\tapfs_deletefs <dev name>\n");
+    printf("Usage:\tapfs_deletefs <volume_path>\n");
     printf("\t-h\tPrint this help.\n");
 }
 
